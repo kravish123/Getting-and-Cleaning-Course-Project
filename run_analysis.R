@@ -6,13 +6,13 @@ library(data.table)
 features <- read.table('./features.txt', col.names = c("n","functions"))
 activities <- read.table('./activity_labels.txt', col.names = c("m","activity"))
 
-subjectTrain = read.table('./train/subject_train.txt', col.names = "subject")
-xTrain = read.table('./train/x_train.txt', col.names = features$functions)
-yTrain = read.table('./train/y_train.txt', col.names = "m")
+subjectTrain <- read.table('./train/subject_train.txt', col.names = "subject")
+xTrain <- read.table('./train/x_train.txt', col.names = features$functions)
+yTrain <-read.table('./train/y_train.txt', col.names = "m")
 
-subjectTest = read.table('./test/subject_test.txt', col.names = "subject")
-xTest = read.table('./test/x_test.txt', col.names = features$functions)
-yTest = read.table('./test/y_test.txt', col.names = "m")
+subjectTest <- read.table('./test/subject_test.txt', col.names = "subject")
+xTest <- read.table('./test/x_test.txt', col.names = features$functions)
+yTest <- read.table('./test/y_test.txt', col.names = "m")
 
 
 SubjectTestTrain <- rbind(subjectTrain, subjectTest)
